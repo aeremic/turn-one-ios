@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B45600882C7503FD009A4728 /* RaceDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = B45600872C7503FD009A4728 /* RaceDetails.swift */; };
 		B4570AA12C73D5B300BC836C /* turn_oneApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4570AA02C73D5B300BC836C /* turn_oneApp.swift */; };
 		B4570AA52C73D5B400BC836C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B4570AA42C73D5B400BC836C /* Assets.xcassets */; };
 		B4570AA82C73D5B400BC836C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B4570AA72C73D5B400BC836C /* Preview Assets.xcassets */; };
@@ -15,6 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B45600872C7503FD009A4728 /* RaceDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaceDetails.swift; sourceTree = "<group>"; };
 		B4570A9D2C73D5B300BC836C /* turn-one.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "turn-one.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4570AA02C73D5B300BC836C /* turn_oneApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = turn_oneApp.swift; sourceTree = "<group>"; };
 		B4570AA42C73D5B400BC836C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -73,6 +75,7 @@
 			isa = PBXGroup;
 			children = (
 				B4570AAF2C73D63400BC836C /* Home.swift */,
+				B45600872C7503FD009A4728 /* RaceDetails.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -155,6 +158,7 @@
 			files = (
 				B4570AB02C73D63400BC836C /* Home.swift in Sources */,
 				B4570AA12C73D5B300BC836C /* turn_oneApp.swift in Sources */,
+				B45600882C7503FD009A4728 /* RaceDetails.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -29,37 +29,37 @@ struct Home: View {
 					.foregroundColor(.blue)
 					.frame(width: 160, height: 100)
 					.padding()
+				Text("World Endurance Championship Races")
+					.font(.title)
+					.fontWeight(.semibold)
+					.foregroundStyle(.blue)
+					.padding(.bottom)
 				List {
 					ForEach(mockedList, id: \.self) { item in
 						HStack {
 							Text(String(item))
+							Spacer()
+							Text("29 Feb 12:30")
+								.padding(8)
+								.foregroundColor(.blue)
+								.background(.white)
+								.font(.body)
+								.overlay(
+									RoundedRectangle(cornerRadius: 10)
+										.stroke(.blue, lineWidth: 1)
+								)
 						}
 						.contentShape(Rectangle())
 						.onTapGesture {
 							onShowDetailsClick(selectedItem: item)
 						}
 					}
-					// .onDelete(perform: onDeleteScore)
 				}
 				.scrollContentBackground(.hidden)
 				Spacer()
 			}
 		}.popup(isPresented: $shouldShowDetails){
-			VStack {
-				Color.black
-					.opacity(0.2)
-					.frame(width: 30, height: 6)
-					.clipShape(Capsule())
-					.padding(.top, 15)
-					.padding(.bottom, 10)
-				Text("Details")
-					.frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height - 200)
-					.foregroundColor(.blue)
-					.padding(.horizontal, 24)
-					.padding(.vertical, 16)
-					.background(.white)
-					.ignoresSafeArea()
-			}
+			RaceDetails()
 		} customize: {
 			$0
 				.type (.toast)
