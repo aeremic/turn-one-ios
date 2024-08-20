@@ -10,12 +10,17 @@ import SwiftUI
 import PopupView
 
 struct Home: View {
-	let mockedList = ["Qatar 1812km", "6 Hours of Imola", "6h of Spa-Francorchamps", "24h of Le Mans"]
+	@StateObject private var raceDataProvider = RaceDataProvider()
+//	let mockedList = [
+//		"Qatar 1812km",
+//		"6 Hours of Imola",
+//		"6h of Spa-Francorchamps",
+//		"24h of Le Mans"]
 	
 	@State var shouldShowDetails = false
-	@State private var selectedItem: String? = nil
+	@State private var selectedItem: Race? = nil
 	
-	func onShowDetailsClick (selectedItem: String) {
+	func onShowDetailsClick (selectedItem: Race) {
 		self.selectedItem = selectedItem
 		self.shouldShowDetails = true
 	}
@@ -35,9 +40,9 @@ struct Home: View {
 					.foregroundStyle(.blue)
 					.padding(.bottom)
 				List {
-					ForEach(mockedList, id: \.self) { item in
+					ForEach(raceDataProvider.races) { item in
 						HStack {
-							Text(String(item))
+							Text(String(item.title))
 							Spacer()
 							Text("29 Feb 12:30")
 								.padding(8)
@@ -56,6 +61,9 @@ struct Home: View {
 					}
 				}
 				.scrollContentBackground(.hidden)
+				.onAppear(){
+					raceDataProvider.fetchRaces()
+				}
 				Spacer()
 			}
 		}.popup(isPresented: $shouldShowDetails){
