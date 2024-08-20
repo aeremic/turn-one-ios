@@ -17,6 +17,7 @@
 		B4A0136F2C752E01001DD623 /* Race.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4A0136E2C752E01001DD623 /* Race.swift */; };
 		B4A013722C752F85001DD623 /* RaceDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4A013712C752F85001DD623 /* RaceDataProvider.swift */; };
 		B4A013752C75363E001DD623 /* Envs.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4A013742C75363E001DD623 /* Envs.swift */; };
+		B4A013772C753B6D001DD623 /* JsonProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4A013762C753B6D001DD623 /* JsonProvider.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		B4A0136E2C752E01001DD623 /* Race.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Race.swift; sourceTree = "<group>"; };
 		B4A013712C752F85001DD623 /* RaceDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaceDataProvider.swift; sourceTree = "<group>"; };
 		B4A013742C75363E001DD623 /* Envs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Envs.swift; sourceTree = "<group>"; };
+		B4A013762C753B6D001DD623 /* JsonProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonProvider.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +106,7 @@
 			isa = PBXGroup;
 			children = (
 				B4A013712C752F85001DD623 /* RaceDataProvider.swift */,
+				B4A013762C753B6D001DD623 /* JsonProvider.swift */,
 			);
 			path = Providers;
 			sourceTree = "<group>";
@@ -194,6 +197,7 @@
 			files = (
 				B4570AB02C73D63400BC836C /* Home.swift in Sources */,
 				B4570AA12C73D5B300BC836C /* turn_oneApp.swift in Sources */,
+				B4A013772C753B6D001DD623 /* JsonProvider.swift in Sources */,
 				B4A0136D2C752DB3001DD623 /* Schedule.swift in Sources */,
 				B4A013722C752F85001DD623 /* RaceDataProvider.swift in Sources */,
 				B45600882C7503FD009A4728 /* RaceDetails.swift in Sources */,

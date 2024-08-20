@@ -7,8 +7,8 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "B9B64762-DA0D-48EF-A616-99DF1005AF80"
-            shouldBeEnabled = "Yes"
+            uuid = "741F9776-38B7-468C-AD42-3821ABF74164"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "turn-one/Providers/RaceDataProvider.swift"

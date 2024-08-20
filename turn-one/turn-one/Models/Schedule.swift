@@ -11,5 +11,5 @@ struct Schedule: Codable, Identifiable {
 	let id: Int?
 	
 	let name: String
-	let date: String
+	let date: Date
 }

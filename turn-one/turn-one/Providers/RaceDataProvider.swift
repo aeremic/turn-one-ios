@@ -16,15 +16,15 @@ class RaceDataProvider : ObservableObject {
 		
 		URLSession.shared.dataTask(with: url) { data, response, error in
 			guard let data = data, error == nil else { return }
-			
-			let races = try? JSONDecoder().decode([Race].self, from: data)
+
+			let races = JsonProvider().decode([Race].self, from: data)
 			
 			// execute task on main thread asynchronously.
 			// it doesnt block the queue and main UI thread since it is async.
 				/// The primary use of DispatchQueue.main.async is when you have code running on a background queue and
 				/// you need a specific block of code to be executed on the main queue.
 			DispatchQueue.main.async {
-				self.races = races ?? []
+				self.races = races
 			}
 		}.resume()
 	}

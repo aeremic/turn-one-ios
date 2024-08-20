@@ -11,7 +11,7 @@ struct Race: Codable, Identifiable {
 	let id: Int?
 	
 	let title: String
-	let date: String // Issues with Date type
+	let date: Date
 	
 	// let schedules: [Schedule]
 }
