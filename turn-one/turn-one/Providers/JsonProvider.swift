@@ -8,6 +8,8 @@
 import Foundation
 
 struct JsonProvider {
+	private let defaultDateFormat = "yyyy-MM-dd'T'HH:mm:ss'Z'"
+	
 	private var decoder : JSONDecoder
 	private var dateFormatter : DateFormatter
 	
@@ -15,7 +17,7 @@ struct JsonProvider {
 		decoder = JSONDecoder()
 		dateFormatter = DateFormatter()
 		
-		dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss'Z'"
+		dateFormatter.dateFormat = defaultDateFormat
 		decoder.dateDecodingStrategy = .formatted(dateFormatter)
 	}
 	
