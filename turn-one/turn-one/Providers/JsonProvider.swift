@@ -9,6 +9,7 @@ import Foundation
 
 struct JsonProvider {
 	private let defaultDateFormat = "yyyy-MM-dd'T'HH:mm:ss'Z'"
+	private let stylizedDateFormat = "MMM d, h:mm a"
 	
 	private var decoder : JSONDecoder
 	private var dateFormatter : DateFormatter

@@ -42,7 +42,16 @@ struct Home: View {
 						HStack {
 							Text(String(race.title))
 							Spacer()
-							Text("29 Feb 12:30")
+//							Text("29 Feb 12:30")
+//								.padding(8)
+//								.foregroundColor(.blue)
+//								.background(.white)
+//								.font(.body)
+//								.overlay(
+//									RoundedRectangle(cornerRadius: 10)
+//										.stroke(.blue, lineWidth: 1)
+//
+							Text(race.date, format: .dateTime.day().month())
 								.padding(8)
 								.foregroundColor(.blue)
 								.background(.white)

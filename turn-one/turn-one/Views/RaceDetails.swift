@@ -31,13 +31,14 @@ struct RaceDetails : View {
 								Text(schedule.title)
 									.font(.body)
 								Spacer()
-//								Text(schedule.date)
-//									.padding(8)
-//									.border(.blue)
-//									.foregroundColor(.white)
-//									.background(.blue)
-//									.cornerRadius(10)
-//									.font(.body)
+								Text(schedule.date, 
+									 format: .dateTime.day().month().hour().minute())
+									.padding(8)
+									.border(.blue)
+									.foregroundColor(.white)
+									.background(.blue)
+									.cornerRadius(10)
+									.font(.body)
 							}
 							.padding(.bottom)
 						}
