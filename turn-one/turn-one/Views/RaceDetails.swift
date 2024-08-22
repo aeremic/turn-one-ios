@@ -21,7 +21,7 @@ struct RaceDetails : View {
 						.clipShape(Capsule())
 						.padding(.top, 15)
 					VStack(alignment: .leading) {
-						Text("Qatar 1812km Details")
+						Text(race!.title)
 							.font(.title)
 							.foregroundStyle(.blue)
 							.padding(.bottom)
@@ -47,7 +47,7 @@ struct RaceDetails : View {
 						minWidth: 0,
 						maxWidth: .infinity
 					)
-					// Spacer() // uncomment for full screen popup
+					Spacer() // uncomment for full screen popup
 				}
 				.padding(.horizontal, 24)
 				.padding(.vertical, 16)
