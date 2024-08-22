@@ -13,6 +13,7 @@
 		B4570AA82C73D5B400BC836C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B4570AA72C73D5B400BC836C /* Preview Assets.xcassets */; };
 		B4570AB02C73D63400BC836C /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4570AAF2C73D63400BC836C /* Home.swift */; };
 		B4570AB32C73DB6000BC836C /* PopupView in Frameworks */ = {isa = PBXBuildFile; productRef = B4570AB22C73DB6000BC836C /* PopupView */; };
+		B45CF7A52C77CA31002A4F18 /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = B45CF7A42C77CA31002A4F18 /* Enums.swift */; };
 		B4A0136D2C752DB3001DD623 /* Schedule.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4A0136C2C752DB3001DD623 /* Schedule.swift */; };
 		B4A0136F2C752E01001DD623 /* Race.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4A0136E2C752E01001DD623 /* Race.swift */; };
 		B4A013722C752F85001DD623 /* RaceDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4A013712C752F85001DD623 /* RaceDataProvider.swift */; };
@@ -27,6 +28,7 @@
 		B4570AA42C73D5B400BC836C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B4570AA72C73D5B400BC836C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		B4570AAF2C73D63400BC836C /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; tabWidth = 4; };
+		B45CF7A42C77CA31002A4F18 /* Enums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enums.swift; sourceTree = "<group>"; };
 		B4A0136C2C752DB3001DD623 /* Schedule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Schedule.swift; sourceTree = "<group>"; };
 		B4A0136E2C752E01001DD623 /* Race.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Race.swift; sourceTree = "<group>"; };
 		B4A013712C752F85001DD623 /* RaceDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaceDataProvider.swift; sourceTree = "<group>"; };
@@ -115,6 +117,7 @@
 			isa = PBXGroup;
 			children = (
 				B4A013742C75363E001DD623 /* Envs.swift */,
+				B45CF7A42C77CA31002A4F18 /* Enums.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -202,6 +205,7 @@
 				B4A013722C752F85001DD623 /* RaceDataProvider.swift in Sources */,
 				B45600882C7503FD009A4728 /* RaceDetails.swift in Sources */,
 				B4A0136F2C752E01001DD623 /* Race.swift in Sources */,
+				B45CF7A52C77CA31002A4F18 /* Enums.swift in Sources */,
 				B4A013752C75363E001DD623 /* Envs.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

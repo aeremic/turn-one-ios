@@ -11,8 +11,11 @@ import Combine
 class RaceDataProvider : ObservableObject {
 	@Published var races: [Race] = []
 	
-	func fetchRaces () {
-		guard let url = URL(string: "\(Api.baseUrl)/races/") else { return }
+	func fetchRaces () throws {
+		guard let url = URL(string: "\(Api.baseUrl)/races/") 
+		else {
+			throw GenericError.genericRuntimeError("Connection to API failed.")
+		}
 		
 		URLSession.shared.dataTask(with: url) { data, response, error in
 			guard let data = data, error == nil else { return }

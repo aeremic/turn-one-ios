@@ -11,18 +11,17 @@ import PopupView
 
 struct Home: View {
 	@StateObject private var raceDataProvider = RaceDataProvider()
-//	let mockedList = [
-//		"Qatar 1812km",
-//		"6 Hours of Imola",
-//		"6h of Spa-Francorchamps",
-//		"24h of Le Mans"]
 	
 	@State var shouldShowDetails = false
-	@State private var selectedItem: Race? = nil
+	@State var selectedRaceForShowDetails: Race? = nil
 	
-	func onShowDetailsClick (selectedItem: Race) {
-		self.selectedItem = selectedItem
-		self.shouldShowDetails = true
+	func onShowDetailsClick (selectedRace: Race) {
+		selectedRaceForShowDetails = selectedRace
+		shouldShowDetails = true
+	}
+	
+	func fetchRaces() {
+		try! raceDataProvider.fetchRaces()
 	}
 	
 	var body: some View {
@@ -40,9 +39,9 @@ struct Home: View {
 					.foregroundStyle(.blue)
 					.padding(.bottom)
 				List {
-					ForEach(raceDataProvider.races) { item in
+					ForEach(raceDataProvider.races) { race in
 						HStack {
-							Text(String(item.title))
+							Text(String(race.title))
 							Spacer()
 							Text("29 Feb 12:30")
 								.padding(8)
@@ -56,18 +55,19 @@ struct Home: View {
 						}
 						.contentShape(Rectangle())
 						.onTapGesture {
-							onShowDetailsClick(selectedItem: item)
+							onShowDetailsClick(selectedRace: race)
 						}
 					}
 				}
 				.scrollContentBackground(.hidden)
 				.onAppear(){
-					raceDataProvider.fetchRaces()
+					fetchRaces()
 				}
 				Spacer()
 			}
 		}.popup(isPresented: $shouldShowDetails){
-			RaceDetails()
+			Text(String(shouldShowDetails))
+			RaceDetails(race: $selectedRaceForShowDetails)
 		} customize: {
 			$0
 				.type (.toast)

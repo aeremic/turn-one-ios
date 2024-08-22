@@ -9,16 +9,7 @@ import Foundation
 import SwiftUI
 
 struct RaceDetails : View {
-//	@State private var schedules = [
-//		Schedule(name: "Free Practice 1", date: "29 Feb 12:30"),
-//		Schedule(name: "Free Practice 2", date: "29 Feb 12:30"),
-//		Schedule(name: "Free Practice 3", date: "29 Feb 12:30"),
-//		Schedule(name: "Qualifying - LMGT3", date: "29 Feb 12:30"),
-//		Schedule(name: "Hyperpole - LMGT3", date: "29 Feb 12:30"),
-//		Schedule(name: "Qualifying - HY", date: "29 Feb 12:30"),
-//		Schedule(name: "Hyperpole - HY", date: "29 Feb 12:30"),
-//		Schedule(name: "Race", date: "29 Feb 12:30")
-//	]
+	@Binding var race: Race?
 	
 	var body : some View {
 		ZStack {
@@ -35,11 +26,11 @@ struct RaceDetails : View {
 							.foregroundStyle(.blue)
 							.padding(.bottom)
 						
-//						ForEach(schedules) { schedule in
-//							HStack {
-//								/*@START_MENU_TOKEN@*/Text(schedule.name)/*@END_MENU_TOKEN@*/
-//									.font(.body)
-//								Spacer()
+						ForEach(race!.schedules) { schedule in
+							HStack {
+								Text(schedule.title)
+									.font(.body)
+								Spacer()
 //								Text(schedule.date)
 //									.padding(8)
 //									.border(.blue)
@@ -47,9 +38,9 @@ struct RaceDetails : View {
 //									.background(.blue)
 //									.cornerRadius(10)
 //									.font(.body)
-//							}
-//							.padding(.bottom)
-//						}
+							}
+							.padding(.bottom)
+						}
 					}
 					.frame(
 						minWidth: 0,
@@ -65,8 +56,4 @@ struct RaceDetails : View {
 			}
 		}
 	}
-}
-
-#Preview {
-	RaceDetails()
 }
