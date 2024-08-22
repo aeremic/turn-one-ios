@@ -65,7 +65,6 @@ struct Home: View {
 				Spacer()
 			}
 		}.popup(isPresented: $shouldShowDetails){
-			Text(String(shouldShowDetails))
 			RaceDetails(race: $selectedRaceForShowDetails)
 		} customize: {
 			$0
