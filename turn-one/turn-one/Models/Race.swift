@@ -13,5 +13,5 @@ struct Race: Codable, Identifiable {
 	let title: String
 	let date: Date
 	
-	// let schedules: [Schedule]
+	let schedules: [Schedule]
 }

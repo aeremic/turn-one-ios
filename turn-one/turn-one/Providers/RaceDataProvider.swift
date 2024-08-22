@@ -24,7 +24,7 @@ class RaceDataProvider : ObservableObject {
 				/// The primary use of DispatchQueue.main.async is when you have code running on a background queue and
 				/// you need a specific block of code to be executed on the main queue.
 			DispatchQueue.main.async {
-				self.races = races
+				self.races = races ?? []
 			}
 		}.resume()
 	}

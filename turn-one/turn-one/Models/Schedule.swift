@@ -10,6 +10,6 @@ import Foundation
 struct Schedule: Codable, Identifiable {
 	let id: Int?
 	
-	let name: String
+	let title: String
 	let date: Date
 }

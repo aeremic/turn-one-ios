@@ -21,7 +21,7 @@ struct JsonProvider {
 		decoder.dateDecodingStrategy = .formatted(dateFormatter)
 	}
 	
-	func decode<T>(_ type: T.Type, from data: Data) -> T where T : Decodable {
-		return try! decoder.decode(type, from: data)
+	func decode<T>(_ type: T.Type, from data: Data) -> Optional<T> where T : Decodable {
+		return try? decoder.decode(type, from: data)
 	}
 }

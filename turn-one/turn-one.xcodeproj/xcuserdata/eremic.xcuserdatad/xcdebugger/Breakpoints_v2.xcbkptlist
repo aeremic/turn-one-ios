@@ -20,5 +20,51 @@
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "2DF8CE91-3B14-41E8-96E4-D03B6B9AC7E3"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "turn-one/Providers/RaceDataProvider.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "26"
+            endingLineNumber = "26"
+            landmarkName = "fetchRaces()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "2DF8CE91-3B14-41E8-96E4-D03B6B9AC7E3 - 2023cab41cfc288"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Sendable (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in turn_one.RaceDataProvider.fetchRaces() -&gt; ()"
+                  moduleName = "turn-one"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/eremic/turn-one-ios/turn-one/turn-one/Providers/RaceDataProvider.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "26"
+                  endingLineNumber = "26">
+               </Location>
+               <Location
+                  uuid = "2DF8CE91-3B14-41E8-96E4-D03B6B9AC7E3 - fd6435e1a1c92c12"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Swift.MainActor () -&gt; () in closure #1 @Sendable (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in turn_one.RaceDataProvider.fetchRaces() -&gt; ()"
+                  moduleName = "turn-one"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/eremic/turn-one-ios/turn-one/turn-one/Providers/RaceDataProvider.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "27"
+                  endingLineNumber = "27">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
    </Breakpoints>
 </Bucket>
