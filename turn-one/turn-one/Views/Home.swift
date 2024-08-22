@@ -28,10 +28,9 @@ struct Home: View {
 		ZStack {
 			VStack {
 				Spacer()
-				Image(systemName: "car.2.fill")
+				Image("logo")
 					.resizable()
-					.foregroundColor(.blue)
-					.frame(width: 160, height: 100)
+					.frame(width: 100, height: 100)
 					.padding()
 				Text("World Endurance Championship Races")
 					.font(.title)
