@@ -19,6 +19,8 @@ struct JsonProvider {
 		dateFormatter = DateFormatter()
 		
 		dateFormatter.dateFormat = defaultDateFormat
+		dateFormatter.timeZone = .current
+				
 		decoder.dateDecodingStrategy = .formatted(dateFormatter)
 	}
 	

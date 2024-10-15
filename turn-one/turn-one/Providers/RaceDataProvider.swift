@@ -19,7 +19,7 @@ class RaceDataProvider : ObservableObject {
 		
 		URLSession.shared.dataTask(with: url) { data, response, error in
 			guard let data = data, error == nil else { return }
-
+ 
 			let races = JsonProvider().decode([Race].self, from: data)
 			
 			// execute task on main thread asynchronously.

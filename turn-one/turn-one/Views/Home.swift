@@ -51,15 +51,24 @@ struct Home: View {
 //									RoundedRectangle(cornerRadius: 10)
 //										.stroke(.blue, lineWidth: 1)
 //
-							Text(race.date, format: .dateTime.day().month())
-								.padding(8)
-								.foregroundColor(.blue)
-								.background(.white)
-								.font(.body)
-								.overlay(
-									RoundedRectangle(cornerRadius: 10)
-										.stroke(.blue, lineWidth: 1)
-								)
+							if race.isLive() {
+								Text(race.date, format: .dateTime.day().month())
+									.padding(8)
+									.foregroundColor(.white)
+									.background(.red)
+									.cornerRadius(10)
+									.font(.body)
+							} else {
+								Text(race.date, format: .dateTime.day().month())
+									.padding(8)
+									.foregroundColor(.blue)
+									.background(.white)
+									.font(.body)
+									.overlay(
+										RoundedRectangle(cornerRadius: 10)
+											.stroke(.blue, lineWidth: 1)
+									)
+							}
 						}
 						.contentShape(Rectangle())
 						.onTapGesture {

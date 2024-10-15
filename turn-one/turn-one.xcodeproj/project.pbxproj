@@ -19,6 +19,7 @@
 		B4A013722C752F85001DD623 /* RaceDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4A013712C752F85001DD623 /* RaceDataProvider.swift */; };
 		B4A013752C75363E001DD623 /* Envs.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4A013742C75363E001DD623 /* Envs.swift */; };
 		B4A013772C753B6D001DD623 /* JsonProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4A013762C753B6D001DD623 /* JsonProvider.swift */; };
+		B4BFB1A52CBF013500E0F4FA /* Calendar.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4BFB1A42CBF013100E0F4FA /* Calendar.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		B4A013712C752F85001DD623 /* RaceDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaceDataProvider.swift; sourceTree = "<group>"; };
 		B4A013742C75363E001DD623 /* Envs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Envs.swift; sourceTree = "<group>"; };
 		B4A013762C753B6D001DD623 /* JsonProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonProvider.swift; sourceTree = "<group>"; };
+		B4BFB1A42CBF013100E0F4FA /* Calendar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Calendar.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +118,7 @@
 		B4A013732C753617001DD623 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				B4BFB1A42CBF013100E0F4FA /* Calendar.swift */,
 				B4A013742C75363E001DD623 /* Envs.swift */,
 				B45CF7A42C77CA31002A4F18 /* Enums.swift */,
 			);
@@ -207,6 +210,7 @@
 				B4A0136F2C752E01001DD623 /* Race.swift in Sources */,
 				B45CF7A52C77CA31002A4F18 /* Enums.swift in Sources */,
 				B4A013752C75363E001DD623 /* Envs.swift in Sources */,
+				B4BFB1A52CBF013500E0F4FA /* Calendar.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
