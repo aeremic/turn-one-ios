@@ -41,14 +41,25 @@ struct RaceDetails : View {
 									.cornerRadius(10)
 									.font(.body)
 								} else {
-									Text(schedule.date,
-										 format: .dateTime.day().month().hour().minute())
-									.padding(8)
-									.border(.blue)
-									.foregroundColor(.white)
-									.background(.blue)
-									.cornerRadius(10)
-									.font(.body)
+									if schedule.isFinished() {
+										Text(schedule.date,
+											 format: .dateTime.day().month().hour().minute())
+										.padding(8)
+										.border(.gray)
+										.foregroundColor(.white)
+										.background(.gray)
+										.cornerRadius(10)
+										.font(.body)
+									} else {
+										Text(schedule.date,
+											 format: .dateTime.day().month().hour().minute())
+										.padding(8)
+										.border(.blue)
+										.foregroundColor(.white)
+										.background(.blue)
+										.cornerRadius(10)
+										.font(.body)
+									}
 								}
 							}
 							.padding(.bottom)

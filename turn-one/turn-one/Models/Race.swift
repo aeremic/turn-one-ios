@@ -19,4 +19,8 @@ struct Race: Codable, Identifiable {
 		Calendar.addOrSubtractDay(date: self.date, day: -5) <= Date.now
 		&& Calendar.addOrSubtractDay(date: self.date, day: 1) > Date.now
 	}
+	
+	func isFinished() -> Bool {
+		self.date < Date.now
+	}
 }

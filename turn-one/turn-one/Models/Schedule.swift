@@ -16,4 +16,8 @@ struct Schedule: Codable, Identifiable {
 	func isLive() -> Bool {
 		self.date < Date.now && Calendar.addOrSubtractHour(date: self.date, hour: 1) >= Date.now
 	}
+	
+	func isFinished() -> Bool {
+		self.date < Date.now
+	}
 }

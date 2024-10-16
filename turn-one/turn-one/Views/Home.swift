@@ -59,15 +59,27 @@ struct Home: View {
 									.cornerRadius(10)
 									.font(.body)
 							} else {
-								Text(race.date, format: .dateTime.day().month())
-									.padding(8)
-									.foregroundColor(.blue)
-									.background(.white)
-									.font(.body)
-									.overlay(
-										RoundedRectangle(cornerRadius: 10)
-											.stroke(.blue, lineWidth: 1)
-									)
+								if race.isFinished() {
+									Text(race.date, format: .dateTime.day().month())
+										.padding(8)
+										.foregroundColor(.gray)
+										.background(.white)
+										.font(.body)
+										.overlay(
+											RoundedRectangle(cornerRadius: 10)
+												.stroke(.gray, lineWidth: 1)
+										)
+								} else {
+									Text(race.date, format: .dateTime.day().month())
+										.padding(8)
+										.foregroundColor(.blue)
+										.background(.white)
+										.font(.body)
+										.overlay(
+											RoundedRectangle(cornerRadius: 10)
+												.stroke(.blue, lineWidth: 1)
+										)
+								}
 							}
 						}
 						.contentShape(Rectangle())
