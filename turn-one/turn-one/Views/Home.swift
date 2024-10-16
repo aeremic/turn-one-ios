@@ -37,60 +37,64 @@ struct Home: View {
 					.fontWeight(.semibold)
 					.foregroundStyle(.blue)
 					.padding(.bottom)
-				List {
-					ForEach(raceDataProvider.races) { race in
-						HStack {
-							Text(String(race.title))
-							Spacer()
-//							Text("29 Feb 12:30")
-//								.padding(8)
-//								.foregroundColor(.blue)
-//								.background(.white)
-//								.font(.body)
-//								.overlay(
-//									RoundedRectangle(cornerRadius: 10)
-//										.stroke(.blue, lineWidth: 1)
-//
-							if race.isLive() {
-								Text(race.date, format: .dateTime.day().month())
-									.padding(8)
-									.foregroundColor(.white)
-									.background(.red)
-									.cornerRadius(10)
-									.font(.body)
-							} else {
-								if race.isFinished() {
+				if raceDataProvider.isLoading {
+					SpinnerView()
+				} else {
+					List {
+						ForEach(raceDataProvider.races) { race in
+							HStack {
+								Text(String(race.title))
+								Spacer()
+									//							Text("29 Feb 12:30")
+									//								.padding(8)
+									//								.foregroundColor(.blue)
+									//								.background(.white)
+									//								.font(.body)
+									//								.overlay(
+									//									RoundedRectangle(cornerRadius: 10)
+									//										.stroke(.blue, lineWidth: 1)
+									//
+								if race.isLive() {
 									Text(race.date, format: .dateTime.day().month())
 										.padding(8)
-										.foregroundColor(.gray)
-										.background(.white)
+										.foregroundColor(.white)
+										.background(.red)
+										.cornerRadius(10)
 										.font(.body)
-										.overlay(
-											RoundedRectangle(cornerRadius: 10)
-												.stroke(.gray, lineWidth: 1)
-										)
 								} else {
-									Text(race.date, format: .dateTime.day().month())
-										.padding(8)
-										.foregroundColor(.blue)
-										.background(.white)
-										.font(.body)
-										.overlay(
-											RoundedRectangle(cornerRadius: 10)
-												.stroke(.blue, lineWidth: 1)
-										)
+									if race.isFinished() {
+										Text(race.date, format: .dateTime.day().month())
+											.padding(8)
+											.foregroundColor(.gray)
+											.background(.white)
+											.font(.body)
+											.overlay(
+												RoundedRectangle(cornerRadius: 10)
+													.stroke(.gray, lineWidth: 1)
+											)
+									} else {
+										Text(race.date, format: .dateTime.day().month())
+											.padding(8)
+											.foregroundColor(.blue)
+											.background(.white)
+											.font(.body)
+											.overlay(
+												RoundedRectangle(cornerRadius: 10)
+													.stroke(.blue, lineWidth: 1)
+											)
+									}
 								}
 							}
-						}
-						.contentShape(Rectangle())
-						.onTapGesture {
-							onShowDetailsClick(selectedRace: race)
+							.contentShape(Rectangle())
+							.onTapGesture {
+								onShowDetailsClick(selectedRace: race)
+							}
 						}
 					}
-				}
-				.scrollContentBackground(.hidden)
-				.onAppear(){
-					fetchRaces()
+					.scrollContentBackground(.hidden)
+					.onAppear(){
+						fetchRaces()
+					}
 				}
 				Spacer()
 			}
