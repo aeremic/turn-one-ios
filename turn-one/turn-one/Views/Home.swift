@@ -38,7 +38,9 @@ struct Home: View {
 					.foregroundStyle(.blue)
 					.padding(.bottom)
 				if raceDataProvider.isLoading {
+					Spacer()
 					SpinnerView()
+					Spacer()
 				} else {
 					List {
 						ForEach(raceDataProvider.races) { race in
