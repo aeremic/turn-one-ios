@@ -37,25 +37,13 @@ struct Home: View {
 					.fontWeight(.semibold)
 					.foregroundStyle(.blue)
 					.padding(.bottom)
-				if raceDataProvider.isLoading {
-					Spacer()
-					SpinnerView()
-					Spacer()
-				} else {
+				
+				if !raceDataProvider.isLoading {
 					List {
 						ForEach(raceDataProvider.races) { race in
 							HStack {
 								Text(String(race.title))
 								Spacer()
-									//							Text("29 Feb 12:30")
-									//								.padding(8)
-									//								.foregroundColor(.blue)
-									//								.background(.white)
-									//								.font(.body)
-									//								.overlay(
-									//									RoundedRectangle(cornerRadius: 10)
-									//										.stroke(.blue, lineWidth: 1)
-									//
 								if race.isLive() {
 									Text(race.date, format: .dateTime.day().month())
 										.padding(8)
@@ -64,27 +52,16 @@ struct Home: View {
 										.cornerRadius(10)
 										.font(.body)
 								} else {
-									if race.isFinished() {
-										Text(race.date, format: .dateTime.day().month())
-											.padding(8)
-											.foregroundColor(.gray)
-											.background(.white)
-											.font(.body)
-											.overlay(
-												RoundedRectangle(cornerRadius: 10)
-													.stroke(.gray, lineWidth: 1)
-											)
-									} else {
-										Text(race.date, format: .dateTime.day().month())
-											.padding(8)
-											.foregroundColor(.blue)
-											.background(.white)
-											.font(.body)
-											.overlay(
-												RoundedRectangle(cornerRadius: 10)
-													.stroke(.blue, lineWidth: 1)
-											)
-									}
+									Text(race.date, format: .dateTime.day().month())
+										.padding(8)
+										.foregroundColor(race.isFinished() ? .gray : .blue)
+										.background(.white)
+										.font(.body)
+										.overlay(
+											RoundedRectangle(cornerRadius: 10)
+												.stroke(race.isFinished() ? .gray : .blue, lineWidth: 1)
+										)
+									
 								}
 							}
 							.contentShape(Rectangle())
@@ -97,6 +74,10 @@ struct Home: View {
 					.onAppear(){
 						fetchRaces()
 					}
+				} else {
+					Spacer()
+					SpinnerView()
+					Spacer()
 				}
 				Spacer()
 			}
