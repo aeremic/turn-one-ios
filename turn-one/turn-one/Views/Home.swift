@@ -8,11 +8,27 @@
 import Foundation
 import SwiftUI
 
+enum GoToType {
+	case wecRaces
+	case f1Races
+	case aboutUs
+}
+
 struct Home : View {
 	@EnvironmentObject var router: Router
 	
-	func onGoToWECClick() {
-		router.navigate(to: .wec)
+	func onGoToClick(type: GoToType) {
+		switch(type) {
+		case .wecRaces:
+			router.navigate(to: .races)
+			break
+		case .f1Races:
+			router.navigate(to: .races)
+			break
+		case .aboutUs:
+			router.navigate(to: .races)
+			break;
+		}
 	}
 	
 	var body: some View {
@@ -36,15 +52,15 @@ struct Home : View {
 					}
 					Spacer()
 				}
-				Button(action: {}) {
+				Button(action: { self.onGoToClick(type: .f1Races) }) {
 					Text("Formula 1")
 				}
 				.buttonStyle(PrimaryButtonStyle(maxWidth: 300))
-				Button(action: {self.onGoToWECClick()}) {
+				Button(action: { self.onGoToClick(type: .wecRaces) }) {
 					Text("World Endurance Championship")
 				}
 				.buttonStyle(PrimaryButtonStyle(maxWidth: 300))
-				Button(action: {}) {
+				Button(action: { self.onGoToClick(type: .aboutUs) }) {
 					Text("About Us")
 				}
 				.buttonStyle(SecondaryButtonStyle(maxWidth: 300))

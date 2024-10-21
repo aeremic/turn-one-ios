@@ -17,7 +17,7 @@ struct turn_oneApp: App {
 				Home()
 				.navigationDestination(for: Router.Destination.self) { dest in
 					switch dest {
-					case .wec:
+					case .races:
 						Races()
 					}
 				}
