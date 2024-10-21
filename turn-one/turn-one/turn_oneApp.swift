@@ -9,9 +9,20 @@ import SwiftUI
 
 @main
 struct turn_oneApp: App {
+	@ObservedObject var router = Router()
+
     var body: some Scene {
         WindowGroup {
-            Home()
+			NavigationStack(path: $router.navPath) {
+				Home()
+				.navigationDestination(for: Router.Destination.self) { dest in
+					switch dest {
+					case .wec:
+						Races()
+					}
+				}
+			}
+			.environmentObject(router)
         }
     }
 }

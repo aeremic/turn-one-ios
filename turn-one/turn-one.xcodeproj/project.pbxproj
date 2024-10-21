@@ -11,7 +11,7 @@
 		B4570AA12C73D5B300BC836C /* turn_oneApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4570AA02C73D5B300BC836C /* turn_oneApp.swift */; };
 		B4570AA52C73D5B400BC836C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B4570AA42C73D5B400BC836C /* Assets.xcassets */; };
 		B4570AA82C73D5B400BC836C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B4570AA72C73D5B400BC836C /* Preview Assets.xcassets */; };
-		B4570AB02C73D63400BC836C /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4570AAF2C73D63400BC836C /* Home.swift */; };
+		B4570AB02C73D63400BC836C /* Races.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4570AAF2C73D63400BC836C /* Races.swift */; };
 		B4570AB32C73DB6000BC836C /* PopupView in Frameworks */ = {isa = PBXBuildFile; productRef = B4570AB22C73DB6000BC836C /* PopupView */; };
 		B45CF7A52C77CA31002A4F18 /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = B45CF7A42C77CA31002A4F18 /* Enums.swift */; };
 		B4A0136D2C752DB3001DD623 /* Schedule.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4A0136C2C752DB3001DD623 /* Schedule.swift */; };
@@ -21,6 +21,10 @@
 		B4A013772C753B6D001DD623 /* JsonProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4A013762C753B6D001DD623 /* JsonProvider.swift */; };
 		B4B175432CC049EE000ECC73 /* SpinnerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4B175422CC049EB000ECC73 /* SpinnerView.swift */; };
 		B4BFB1A52CBF013500E0F4FA /* Calendar.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4BFB1A42CBF013100E0F4FA /* Calendar.swift */; };
+		B4DE12232CC6C00E00368459 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4DE12222CC6C00D00368459 /* Home.swift */; };
+		B4DE12272CC6C46B00368459 /* PrimaryButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4DE12262CC6C46B00368459 /* PrimaryButtonStyle.swift */; };
+		B4DE12292CC6C5AC00368459 /* SecondaryButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4DE12282CC6C5A700368459 /* SecondaryButtonStyle.swift */; };
+		B4DE122B2CC6C90500368459 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4DE122A2CC6C90300368459 /* Router.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,7 +33,7 @@
 		B4570AA02C73D5B300BC836C /* turn_oneApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = turn_oneApp.swift; sourceTree = "<group>"; };
 		B4570AA42C73D5B400BC836C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B4570AA72C73D5B400BC836C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		B4570AAF2C73D63400BC836C /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; tabWidth = 4; };
+		B4570AAF2C73D63400BC836C /* Races.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Races.swift; sourceTree = "<group>"; tabWidth = 4; };
 		B45CF7A42C77CA31002A4F18 /* Enums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enums.swift; sourceTree = "<group>"; };
 		B4A0136C2C752DB3001DD623 /* Schedule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Schedule.swift; sourceTree = "<group>"; };
 		B4A0136E2C752E01001DD623 /* Race.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Race.swift; sourceTree = "<group>"; };
@@ -38,6 +42,10 @@
 		B4A013762C753B6D001DD623 /* JsonProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonProvider.swift; sourceTree = "<group>"; };
 		B4B175422CC049EB000ECC73 /* SpinnerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpinnerView.swift; sourceTree = "<group>"; };
 		B4BFB1A42CBF013100E0F4FA /* Calendar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Calendar.swift; sourceTree = "<group>"; };
+		B4DE12222CC6C00D00368459 /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
+		B4DE12262CC6C46B00368459 /* PrimaryButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryButtonStyle.swift; sourceTree = "<group>"; };
+		B4DE12282CC6C5A700368459 /* SecondaryButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondaryButtonStyle.swift; sourceTree = "<group>"; };
+		B4DE122A2CC6C90300368459 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +85,7 @@
 				B4A0136B2C752DA8001DD623 /* Models */,
 				B4570AAE2C73D62200BC836C /* Views */,
 				B4570AA02C73D5B300BC836C /* turn_oneApp.swift */,
+				B4DE122A2CC6C90300368459 /* Router.swift */,
 				B4570AA42C73D5B400BC836C /* Assets.xcassets */,
 				B4570AA62C73D5B400BC836C /* Preview Content */,
 			);
@@ -94,7 +103,8 @@
 		B4570AAE2C73D62200BC836C /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				B4570AAF2C73D63400BC836C /* Home.swift */,
+				B4DE12222CC6C00D00368459 /* Home.swift */,
+				B4570AAF2C73D63400BC836C /* Races.swift */,
 				B45600872C7503FD009A4728 /* RaceDetails.swift */,
 			);
 			path = Views;
@@ -131,6 +141,8 @@
 		B4B175412CC049D0000ECC73 /* ViewElements */ = {
 			isa = PBXGroup;
 			children = (
+				B4DE12282CC6C5A700368459 /* SecondaryButtonStyle.swift */,
+				B4DE12262CC6C46B00368459 /* PrimaryButtonStyle.swift */,
 				B4B175422CC049EB000ECC73 /* SpinnerView.swift */,
 			);
 			path = ViewElements;
@@ -212,16 +224,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B4570AB02C73D63400BC836C /* Home.swift in Sources */,
+				B4570AB02C73D63400BC836C /* Races.swift in Sources */,
 				B4570AA12C73D5B300BC836C /* turn_oneApp.swift in Sources */,
 				B4A013772C753B6D001DD623 /* JsonProvider.swift in Sources */,
 				B4A0136D2C752DB3001DD623 /* Schedule.swift in Sources */,
 				B4A013722C752F85001DD623 /* RaceDataProvider.swift in Sources */,
 				B45600882C7503FD009A4728 /* RaceDetails.swift in Sources */,
+				B4DE12292CC6C5AC00368459 /* SecondaryButtonStyle.swift in Sources */,
+				B4DE122B2CC6C90500368459 /* Router.swift in Sources */,
 				B4A0136F2C752E01001DD623 /* Race.swift in Sources */,
+				B4DE12272CC6C46B00368459 /* PrimaryButtonStyle.swift in Sources */,
 				B45CF7A52C77CA31002A4F18 /* Enums.swift in Sources */,
 				B4A013752C75363E001DD623 /* Envs.swift in Sources */,
 				B4B175432CC049EE000ECC73 /* SpinnerView.swift in Sources */,
+				B4DE12232CC6C00E00368459 /* Home.swift in Sources */,
 				B4BFB1A52CBF013500E0F4FA /* Calendar.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
