@@ -37,7 +37,7 @@ struct Races: View {
 					.resizable()
 					.frame(width: 100, height: 100)
 					.padding()
-				Text(championshipTitle)
+				Text("\(championshipTitle) schedule")
 					.font(.title)
 					.fontWeight(.semibold)
 					.foregroundStyle(.blue)

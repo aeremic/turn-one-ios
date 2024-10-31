@@ -128,7 +128,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "26"
             endingLineNumber = "26"
-            landmarkName = "onGoToRaceClick(championshipId:)"
+            landmarkName = "onGoToRaceClick(championshipId:championshipTitle:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

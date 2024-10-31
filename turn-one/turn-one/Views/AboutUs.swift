@@ -32,6 +32,9 @@ struct AboutUs : View {
 					}
 					Spacer()
 				}
+				Text("Turn One keeps you on track with schedules for all major motorsports. Currently supports World Endurance Championship.")
+					.font(.body)
+					.padding()
 				Spacer()
 			}
 		}

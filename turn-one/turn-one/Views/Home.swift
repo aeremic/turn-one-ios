@@ -64,15 +64,15 @@ struct Home : View {
 							.buttonStyle(PrimaryButtonStyle(maxWidth: 300))
 						}
 					}
+					Button(action: { self.onGoToClick(type: .aboutUs) }) {
+						Text("About")
+					}
+					.buttonStyle(SecondaryButtonStyle(maxWidth: 300))
 				} else {
 					Spacer()
 					SpinnerView()
 					Spacer()
 				}
-				Button(action: { self.onGoToClick(type: .aboutUs) }) {
-					Text("About Us")
-				}
-				.buttonStyle(SecondaryButtonStyle(maxWidth: 300))
 				Spacer()
 			}
 			.onAppear(){
