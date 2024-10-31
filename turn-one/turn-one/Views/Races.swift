@@ -13,6 +13,7 @@ struct Races: View {
 	@EnvironmentObject var router: Router
 
 	var championshipId: Int
+	var championshipTitle: String
 	
 	@StateObject private var raceDataProvider = RaceDataProvider()
 	
@@ -36,7 +37,7 @@ struct Races: View {
 					.resizable()
 					.frame(width: 100, height: 100)
 					.padding()
-				Text("World Endurance Championship Races")
+				Text(championshipTitle)
 					.font(.title)
 					.fontWeight(.semibold)
 					.foregroundStyle(.blue)
@@ -98,5 +99,5 @@ struct Races: View {
 
 
 #Preview {
-	Races(championshipId: 1)
+	Races(championshipId: 1,championshipTitle: "World Endurance Championship")
 }

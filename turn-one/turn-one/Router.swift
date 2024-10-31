@@ -12,7 +12,7 @@ final class Router : ObservableObject {
 	@Published var navPath = NavigationPath()
 	
 	public enum Destination: Codable, Hashable {
-		case races(championshipId: Int)
+		case races(championshipId: Int, championshipTitle: String)
 		case aboutUs
 	}
 	

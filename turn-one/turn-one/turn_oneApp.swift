@@ -17,8 +17,8 @@ struct turn_oneApp: App {
 				Home()
 				.navigationDestination(for: Router.Destination.self) { dest in
 					switch dest {
-					case .races(let championshipId):
-						Races(championshipId: championshipId)
+					case .races(let championshipId, let championshipTitle):
+						Races(championshipId: championshipId, championshipTitle: championshipTitle)
 					case .aboutUs:
 						AboutUs()
 					}

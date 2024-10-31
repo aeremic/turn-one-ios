@@ -22,8 +22,9 @@ struct Home : View {
 		try! championshipDataProvider.fetchChampionships()
 	}
 	
-	func onGoToRaceClick(championshipId: Int) {
-		router.navigate(to: .races(championshipId: championshipId))
+	func onGoToRaceClick(championshipId: Int, championshipTitle: String) {
+		router.navigate(to: .races(championshipId: championshipId,
+								   championshipTitle: championshipTitle))
 	}
 	
 	func onGoToClick(type: GoToType) {
@@ -54,7 +55,10 @@ struct Home : View {
 				if !championshipDataProvider.isLoading {
 					VStack {
 						ForEach(championshipDataProvider.championships) { championship in
-							Button(action: { self.onGoToRaceClick(championshipId: championship.id!) }) {
+							Button(action: {
+								self.onGoToRaceClick(championshipId: championship.id!,
+													 championshipTitle: championship.title)
+							}) {
 								Text(championship.title)
 							}
 							.buttonStyle(PrimaryButtonStyle(maxWidth: 300))
