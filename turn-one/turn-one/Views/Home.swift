@@ -9,26 +9,25 @@ import Foundation
 import SwiftUI
 
 enum GoToType {
-	case wecRaces
-	case f1Races
+	case races
 	case aboutUs
 }
 
 struct Home : View {
 	@EnvironmentObject var router: Router
 	
+	@StateObject private var championshipDataProvider = ChampionshipDataProvider()
+	
+	func fetchChampionships() {
+		try! championshipDataProvider.fetchChampionships()
+	}
+	
+	func onGoToRaceClick(championshipId: Int) {
+		router.navigate(to: .races(championshipId: championshipId))
+	}
+	
 	func onGoToClick(type: GoToType) {
-		switch(type) {
-		case .wecRaces:
-			router.navigate(to: .races)
-			break
-		case .f1Races:
-			router.navigate(to: .races)
-			break
-		case .aboutUs:
-			router.navigate(to: .races)
-			break;
-		}
+		router.navigate(to: .aboutUs)
 	}
 	
 	var body: some View {
@@ -52,19 +51,28 @@ struct Home : View {
 					}
 					Spacer()
 				}
-				Button(action: { self.onGoToClick(type: .f1Races) }) {
-					Text("Formula 1")
+				if !championshipDataProvider.isLoading {
+					VStack {
+						ForEach(championshipDataProvider.championships) { championship in
+							Button(action: { self.onGoToRaceClick(championshipId: championship.id!) }) {
+								Text(championship.title)
+							}
+							.buttonStyle(PrimaryButtonStyle(maxWidth: 300))
+						}
+					}
+				} else {
+					Spacer()
+					SpinnerView()
+					Spacer()
 				}
-				.buttonStyle(PrimaryButtonStyle(maxWidth: 300))
-				Button(action: { self.onGoToClick(type: .wecRaces) }) {
-					Text("World Endurance Championship")
-				}
-				.buttonStyle(PrimaryButtonStyle(maxWidth: 300))
 				Button(action: { self.onGoToClick(type: .aboutUs) }) {
 					Text("About Us")
 				}
 				.buttonStyle(SecondaryButtonStyle(maxWidth: 300))
 				Spacer()
+			}
+			.onAppear(){
+				fetchChampionships()
 			}
 		}
 	}

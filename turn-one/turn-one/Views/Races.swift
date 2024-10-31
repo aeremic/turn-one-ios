@@ -12,6 +12,8 @@ import PopupView
 struct Races: View {
 	@EnvironmentObject var router: Router
 
+	var championshipId: Int
+	
 	@StateObject private var raceDataProvider = RaceDataProvider()
 	
 	@State var shouldShowDetails = false
@@ -23,7 +25,7 @@ struct Races: View {
 	}
 	
 	func fetchRaces() {
-		try! raceDataProvider.fetchRaces()
+		try! raceDataProvider.fetchRaces(championshipId: championshipId)
 	}
 	
 	var body: some View {
@@ -96,5 +98,5 @@ struct Races: View {
 
 
 #Preview {
-	Races()
+	Races(championshipId: 1)
 }

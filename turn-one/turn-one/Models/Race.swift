@@ -15,6 +15,9 @@ struct Race: Codable, Identifiable {
 		
 	let schedules: [Schedule]
 	
+	let championshipId: Int
+	let championship: Championship
+	
 	func isLive() -> Bool {
 		Calendar.addOrSubtractDay(date: self.date, day: -5) <= Date.now
 		&& Calendar.addOrSubtractDay(date: self.date, day: 1) > Date.now

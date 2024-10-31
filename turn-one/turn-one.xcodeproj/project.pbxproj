@@ -25,6 +25,9 @@
 		B4DE12272CC6C46B00368459 /* PrimaryButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4DE12262CC6C46B00368459 /* PrimaryButtonStyle.swift */; };
 		B4DE12292CC6C5AC00368459 /* SecondaryButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4DE12282CC6C5A700368459 /* SecondaryButtonStyle.swift */; };
 		B4DE122B2CC6C90500368459 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4DE122A2CC6C90300368459 /* Router.swift */; };
+		B4F60A3E2CD40097004758A2 /* ChampionshipDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4F60A3D2CD40092004758A2 /* ChampionshipDataProvider.swift */; };
+		B4F60A402CD4013D004758A2 /* Championship.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4F60A3F2CD40139004758A2 /* Championship.swift */; };
+		B4F60A422CD407AB004758A2 /* AboutUs.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4F60A412CD407AB004758A2 /* AboutUs.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +49,9 @@
 		B4DE12262CC6C46B00368459 /* PrimaryButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryButtonStyle.swift; sourceTree = "<group>"; };
 		B4DE12282CC6C5A700368459 /* SecondaryButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondaryButtonStyle.swift; sourceTree = "<group>"; };
 		B4DE122A2CC6C90300368459 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		B4F60A3D2CD40092004758A2 /* ChampionshipDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChampionshipDataProvider.swift; sourceTree = "<group>"; };
+		B4F60A3F2CD40139004758A2 /* Championship.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Championship.swift; sourceTree = "<group>"; };
+		B4F60A412CD407AB004758A2 /* AboutUs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutUs.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +110,7 @@
 			isa = PBXGroup;
 			children = (
 				B4DE12222CC6C00D00368459 /* Home.swift */,
+				B4F60A412CD407AB004758A2 /* AboutUs.swift */,
 				B4570AAF2C73D63400BC836C /* Races.swift */,
 				B45600872C7503FD009A4728 /* RaceDetails.swift */,
 			);
@@ -113,6 +120,7 @@
 		B4A0136B2C752DA8001DD623 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				B4F60A3F2CD40139004758A2 /* Championship.swift */,
 				B4A0136C2C752DB3001DD623 /* Schedule.swift */,
 				B4A0136E2C752E01001DD623 /* Race.swift */,
 			);
@@ -122,6 +130,7 @@
 		B4A013702C752F41001DD623 /* Providers */ = {
 			isa = PBXGroup;
 			children = (
+				B4F60A3D2CD40092004758A2 /* ChampionshipDataProvider.swift */,
 				B4A013712C752F85001DD623 /* RaceDataProvider.swift */,
 				B4A013762C753B6D001DD623 /* JsonProvider.swift */,
 			);
@@ -225,10 +234,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				B4570AB02C73D63400BC836C /* Races.swift in Sources */,
+				B4F60A3E2CD40097004758A2 /* ChampionshipDataProvider.swift in Sources */,
+				B4F60A422CD407AB004758A2 /* AboutUs.swift in Sources */,
 				B4570AA12C73D5B300BC836C /* turn_oneApp.swift in Sources */,
 				B4A013772C753B6D001DD623 /* JsonProvider.swift in Sources */,
 				B4A0136D2C752DB3001DD623 /* Schedule.swift in Sources */,
 				B4A013722C752F85001DD623 /* RaceDataProvider.swift in Sources */,
+				B4F60A402CD4013D004758A2 /* Championship.swift in Sources */,
 				B45600882C7503FD009A4728 /* RaceDetails.swift in Sources */,
 				B4DE12292CC6C5AC00368459 /* SecondaryButtonStyle.swift in Sources */,
 				B4DE122B2CC6C90500368459 /* Router.swift in Sources */,

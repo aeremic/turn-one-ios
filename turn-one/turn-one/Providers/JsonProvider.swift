@@ -25,6 +25,6 @@ struct JsonProvider {
 	}
 	
 	func decode<T>(_ type: T.Type, from data: Data) -> Optional<T> where T : Decodable {
-		return try? decoder.decode(type, from: data)
+		return try! decoder.decode(type, from: data)
 	}
 }

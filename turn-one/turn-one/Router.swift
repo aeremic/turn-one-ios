@@ -12,7 +12,8 @@ final class Router : ObservableObject {
 	@Published var navPath = NavigationPath()
 	
 	public enum Destination: Codable, Hashable {
-		case races
+		case races(championshipId: Int)
+		case aboutUs
 	}
 	
 	func navigate(to destination: Destination) {
